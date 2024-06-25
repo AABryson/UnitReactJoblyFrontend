@@ -11,7 +11,7 @@ function Profile () {
 
     async function handleSubmit(e) {
         e.preventDefault()
-        console.log('handle submit before called updateUserInfo', currentUser.username)
+        // console.log('handle submit before called updateUserInfo', currentUser.username)
 
         let firstName = currentUser.firstName
         let lastName = currentUser.lastName
@@ -24,7 +24,7 @@ function Profile () {
         let updatedUser = await JoblyApi.updateUserInfo(currentUser.username, userToUpdate)
         // (currentUser.username)
         console.log('after clicking submit button', updatedUser)
-        setCurrentUser(updatedUser)
+        // setCurrentUser(updatedUser)
         setChangeProfile(false)}
 
     }
@@ -46,7 +46,7 @@ function Profile () {
         <>
         {!changeProfile ? (
         <div className='profile'>
-            <h1>{currentUser.userName}'s page</h1>
+            {/* <h1>{currentUser.userName}'s page</h1> */}
             {/* <h2>Username: {currentUser.username}</h2> */}
             <h2>First Name: {currentUser.firstName}</h2>
             <h2>Last Name: {currentUser.lastName}</h2>

@@ -3,6 +3,8 @@ import ContextObject from './ContextObject'
 import { NavLink } from "react-router-dom";
 
 
+
+
 function NavBar() {
   const {currentUser} = useContext(ContextObject)
   console.log('navbar is being rendered')
@@ -14,7 +16,7 @@ function NavBar() {
       
       
             {/**create links to routes that render Menu component which shows a list of linked items which are either snacks or drinks */}
-            <div>
+            <div style={{marginLeft:'20px'}}>
               <NavLink to='/' style={{marginRight:'10px'}}>Home</NavLink>
               <NavLink to="/companies" style={{marginRight:'10px'}}>Companies</NavLink>
               <NavLink to='/jobs' style={{marginRight:'10px'}}>Jobs</NavLink>
@@ -24,7 +26,7 @@ function NavBar() {
                   
                   <NavLink to="/profile" style={{marginRight:'10px'}}>Profile</NavLink>
                   <NavLink to='/logout' style={{marginRight:'10px'}}>Logout</NavLink>
-                  <h3>{currentUser.firstName}</h3>
+                  <span style={{marginLeft: '40px', fontWeight: 'bold'}}>{currentUser.firstName}</span>
                 </>
                   ) : (
                     <>

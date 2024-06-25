@@ -31,9 +31,10 @@ function Signup () {
         let token = await JoblyApi.signUp(signupData)
         console.log(signupData)
         setToken(token)
+        navigate('/')
         setSignupData({username:'', password:'', firstName:'', lastName:'', email:''})
         console.log(token)
-        navigate('/')
+       
 
         return token
         //example of token returned:
